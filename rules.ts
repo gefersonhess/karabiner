@@ -125,54 +125,17 @@ const rules: KarabinerRules[] = [
         description: "Window: Full Screen",
         to: [
           {
-            key_code: "equal_sign",
+            key_code: "f",
             modifiers: ["right_option", "right_command"],
           },
         ],
       },
-      u: {
-        description: "Window: Previous Tab",
+      a: {
+        description: "Window: Previous display",
         to: [
           {
-            key_code: "tab",
-            modifiers: ["right_control", "right_shift"],
-          },
-        ],
-      },
-      i: {
-        description: "Window: Next Tab",
-        to: [
-          {
-            key_code: "tab",
-            modifiers: ["right_control"],
-          },
-        ],
-      },
-      n: {
-        description: "Window: Next Window",
-        to: [
-          {
-            key_code: "close_bracket",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      b: {
-        description: "Window: Back",
-        to: [
-          {
-            key_code: "open_bracket",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      // Note: No literal connection. Both f and n are already taken.
-      m: {
-        description: "Window: Forward",
-        to: [
-          {
-            key_code: "close_bracket",
-            modifiers: ["right_command"],
+            key_code: "left_arrow",
+            modifiers: ["right_control", "right_option", "right_command"],
           },
         ],
       },
