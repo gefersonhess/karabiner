@@ -50,10 +50,10 @@ const rules: KarabinerRules[] = [
       f: app("Firefox"),
       s: app("Slack"),
       t: app("Iterm"),
-      // z: app("zoom.us"),
       m: app("Spotify"),
       k: app("OutlookW"),
-      i: app("IntelliJ IDEA")
+      i: app("IntelliJ IDEA"),
+      l: app("Obsidian")
     },
 
     // w = "Window" via rectangle.app
