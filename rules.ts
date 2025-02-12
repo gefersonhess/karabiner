@@ -51,7 +51,7 @@ const rules: KarabinerRules[] = [
       s: app("Slack"),
       t: app("Iterm"),
       m: app("Spotify"),
-      k: app("OutlookW"),
+      k: app("Outlook (PWA)"),
       i: app("IntelliJ IDEA"),
       b: app("Bruno"),
       l: app("Obsidian")
