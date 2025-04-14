@@ -131,6 +131,24 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      "hyphen": {
+        description: "Window: Make Smaller",
+        to: [
+          {
+            key_code: "hyphen",
+            modifiers: ["right_option", "right_command"],
+          },
+        ],
+      },
+      "equal_sign": {
+        description: "Window: Make larger",
+        to: [
+          {
+            key_code: "equal_sign",
+            modifiers: ["right_option", "right_command"],
+          },
+        ],
+      },
       f: {
         description: "Window: Full Screen",
         to: [

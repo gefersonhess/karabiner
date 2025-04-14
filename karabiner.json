@@ -602,6 +602,62 @@
                 ]
               },
               {
+                "description": "Window: Make Smaller",
+                "to": [
+                  {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                      "right_option",
+                      "right_command"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "hyphen",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Window: Make larger",
+                "to": [
+                  {
+                    "key_code": "equal_sign",
+                    "modifiers": [
+                      "right_option",
+                      "right_command"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
                 "description": "Window: Full Screen",
                 "to": [
                   {
