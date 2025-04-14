@@ -81,7 +81,7 @@ const rules: KarabinerRules[] = [
         description: "Window: Center Third",
         to: [
           {
-            key_code: "up_arrow",
+            key_code: "c",
             modifiers: ["right_option", "right_control"],
           },
         ],
