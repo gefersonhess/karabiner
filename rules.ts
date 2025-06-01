@@ -49,7 +49,7 @@ const rules: KarabinerRules[] = [
       v: app("Visual Studio Code"),
       f: app("Firefox"),
       s: app("Slack"),
-      t: app("Iterm"),
+      t: app("Alacritty"),
       m: app("Spotify"),
       k: app("Outlook (PWA)"),
       i: app("IntelliJ IDEA"),
@@ -82,7 +82,7 @@ const rules: KarabinerRules[] = [
         to: [
           {
             key_code: "c",
-            modifiers: ["right_option", "right_control"],
+            modifiers: ["right_option", "right_command"],
           },
         ],
       },
