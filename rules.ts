@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open } from "./utils";
+import { createHyperSubLayers, app, open, tmuxinator } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -45,16 +45,16 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // o = "Open" applications
     o: {
-      g: app("Microsoft Edge"),
-      v: app("Visual Studio Code"),
+      b: app("Bruno"),
       f: app("Firefox"),
+      g: app("Microsoft Edge"),
+      i: app("IntelliJ IDEA"),
+      k: app("Microsoft Outlook"),
+      p: app("Spotify"),
+      m: app("Microsoft Teams"),
       s: app("Slack"),
       t: app("Alacritty"),
-      m: app("Spotify"),
-      k: app("Outlook (PWA)"),
-      i: app("IntelliJ IDEA"),
-      b: app("Bruno"),
-      l: app("Obsidian")
+      comma: tmuxinator("work"),
     },
 
     // w = "Window" via rectangle.app
@@ -131,7 +131,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      "hyphen": {
+      hyphen: {
         description: "Window: Make Smaller",
         to: [
           {
@@ -140,7 +140,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      "equal_sign": {
+      equal_sign: {
         description: "Window: Make larger",
         to: [
           {
@@ -230,15 +230,6 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      e: {
-        to: [
-          {
-            // Emoji picker
-            key_code: "spacebar",
-            modifiers: ["right_control", "right_command"],
-          },
-        ],
-      },
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
@@ -257,7 +248,6 @@ const rules: KarabinerRules[] = [
         to: [{ key_code: "right_arrow" }],
       },
     },
-
   }),
 ];
 

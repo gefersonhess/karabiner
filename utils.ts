@@ -21,7 +21,7 @@ type HyperKeySublayer = {
 export function createHyperSubLayer(
   sublayer_key: KeyCode,
   commands: HyperKeySublayer,
-  allSubLayerVariables: string[]
+  allSubLayerVariables: string[],
 ): Manipulator[] {
   const subLayerVariableName = generateSubLayerVariableName(sublayer_key);
 
@@ -90,7 +90,7 @@ export function createHyperSubLayer(
             value: 1,
           },
         ],
-      })
+      }),
     ),
   ];
 }
@@ -135,9 +135,9 @@ export function createHyperSubLayers(subLayers: {
           manipulators: createHyperSubLayer(
             key as KeyCode,
             value,
-            allSubLayerVariables
+            allSubLayerVariables,
           ),
-        }
+        },
   );
 }
 
@@ -164,4 +164,21 @@ export function open(what: string): LayerCommand {
  */
 export function app(name: string): LayerCommand {
   return open(`-a '${name}.app'`);
+}
+
+/**
+ * Shortcut for starting a tmuxinator session and focusing the terminal
+ */
+export function tmuxinator(sessionName: string): LayerCommand {
+  return {
+    to: [
+      {
+        shell_command: `/opt/homebrew/bin/tmuxinator start ${sessionName}`,
+      },
+      {
+        shell_command: `open -a 'Alacritty.app'`,
+      },
+    ],
+    description: `Tmuxinator: ${sessionName}`,
+  };
 }
